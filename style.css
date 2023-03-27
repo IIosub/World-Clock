@@ -1,5 +1,24 @@
 .container {
+  background-color: antiquewhite;
+  width: 30%;
+
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+select {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}
+footer {
+  text-align: center;
 }
