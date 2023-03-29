@@ -4,8 +4,7 @@ body {
 }
 
 .container {
-  background-image: url(/World-Clock/img/men.gif);
-  background-repeat: no-repeat;
+  background-image: url(/World-Clock/img/clock_animation.gif);
   background-size: cover;
   width: 50%;
   display: block;
