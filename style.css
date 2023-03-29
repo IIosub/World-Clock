@@ -1,27 +1,102 @@
-.container {
-  background-color: antiquewhite;
-  width: 30%;
-
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
+body {
+  background-color: rgb(235, 235, 235);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1 {
+.container {
+  background-image: url(/World-Clock/img/men.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  display: block;
+  margin: 130px auto;
+  padding: 5px 30px 20px 30px;
+  border-radius: 10px;
+  font-family: "Paytone One", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.h1 {
   text-align: center;
+  color: rgb(248, 160, 59);
+  padding-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 0px;
 }
 
 select {
   display: flex;
-  margin: 0 auto;
-  width: 100%;
-  padding: 5px;
-  border-radius: 10px;
+  background-color: #f0f0f0;
+  width: 22%;
+
+  padding: 8px;
+  border-radius: 3px;
   border: none;
+  font-family: "Paytone One", sans-serif;
 }
 
 .cities {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.flex {
+  color: black;
+  color: rgb(223, 134, 93);
+}
+
+.date {
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+}
+.time {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 35px;
+  color: rgb(221, 141, 75);
+  border-bottom: gray solid 2px;
+}
+
+.time small {
+  font-size: 15px;
 }
 footer {
   text-align: center;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    background-image: url(/World-Clock/img/clock_animation.gif);
+    background-size: cover;
+    width: 90%;
+    margin: 0 auto;
+    object-fit: scale-down;
+  }
+  h1 {
+    color: rgb(248, 160, 59);
+  }
+
+  select {
+    width: 60%;
+  }
+
+  .cities {
+    display: block;
+  }
+  .time {
+    margin-top: 2px;
+    border-bottom: gray dashed 1px;
+    width: 50%;
+  }
 }
