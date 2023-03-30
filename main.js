@@ -1,6 +1,6 @@
 //----London------//
 
-setInterval(function () {
+function updateLondonTime() {
   let londonElement = document.querySelector("#london");
   let londonDate = londonElement.querySelector(".date");
   let londonTime = londonElement.querySelector(".time");
@@ -10,10 +10,13 @@ setInterval(function () {
   londonTime.innerHTML = londonTimeElement.format(
     "h:mm:ss [<small>]A[</small]"
   );
-}, 1000);
+}
+
+setInterval(updateLondonTime, 1000);
 
 //----Warsaw------//
-setInterval(function () {
+
+function updateWarsawTime() {
   let warsawElement = document.querySelector("#warsaw");
   let warsawDate = warsawElement.querySelector(".date");
   let warsawTime = warsawElement.querySelector(".time");
@@ -23,10 +26,12 @@ setInterval(function () {
   warsawTime.innerHTML = warsawTimeElement.format(
     "h:mm:ss [<small>]A[</small]"
   );
-}, 1000);
+}
+
+setInterval(updateWarsawTime, 1000);
 
 //----Madrid------//
-setInterval(function () {
+function updateMadridTime() {
   let madridElement = document.querySelector("#madrid");
   let madridDate = madridElement.querySelector(".date");
   let madridTime = madridElement.querySelector(".time");
@@ -36,10 +41,12 @@ setInterval(function () {
   madridTime.innerHTML = madridTimeElement.format(
     "h:mm:ss [<small>]A[</small]"
   );
-}, 1000);
+}
+
+setInterval(updateMadridTime, 1000);
 
 //----Milan------//
-setInterval(function () {
+function updateMilanTime() {
   let milanElement = document.querySelector("#milan");
   let milanDate = milanElement.querySelector(".date");
   let milanTime = milanElement.querySelector(".time");
@@ -47,9 +54,11 @@ setInterval(function () {
   let milanTimeElement = moment().tz("Europe/Warsaw");
   milanDate.innerHTML = milanTimeElement.format("MMMM Do YYYY");
   milanTime.innerHTML = milanTimeElement.format("h:mm:ss [<small>]A[</small]");
-}, 1000);
+}
+setInterval(updateMilanTime, 1000);
+
 //----New-York------//
-setInterval(function () {
+function updateNewYorkTime() {
   let newYorkElement = document.querySelector("#new-york");
   let newYorkDate = newYorkElement.querySelector(".date");
   let newYorkTime = newYorkElement.querySelector(".time");
@@ -59,11 +68,13 @@ setInterval(function () {
   newYorkTime.innerHTML = newYorkTimeElement.format(
     "h:mm:ss [<small>]A[</small]"
   );
-}, 1000);
+}
+
+setInterval(updateNewYorkTime, 1000);
 
 //----Tokyo------//
 
-setInterval(function () {
+function updateTokyoTime() {
   let tokyoElement = document.querySelector("#tokyo");
   let tokyoDate = tokyoElement.querySelector(".date");
   let tokyoTime = tokyoElement.querySelector(".time");
@@ -71,4 +82,5 @@ setInterval(function () {
   let tokyoTimeElement = moment().tz("Asia/Tokyo");
   tokyoDate.innerHTML = tokyoTimeElement.format("MMMM Do YYYY");
   tokyoTime.innerHTML = tokyoTimeElement.format("h:mm:ss [<small>]A[</small]");
-}, 1000);
+}
+setInterval(updateTokyoTime, 1000);
