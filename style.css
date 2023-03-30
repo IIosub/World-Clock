@@ -6,7 +6,7 @@ body {
 .container {
   background-image: url("./img/men.gif");
   background-size: cover;
-  width: 50%;
+  width: 45%;
   display: block;
   margin: 130px auto;
   padding: 5px 30px 20px 30px;
@@ -43,16 +43,12 @@ select {
   justify-content: space-between;
   margin-top: 10px;
   border-radius: 10px;
-}
-
-.flex {
-  color: black;
-  color: rgb(223, 134, 93);
+  color: rgb(230, 147, 46);
 }
 
 .date {
   font-size: 13px;
-  color: rgb(0, 0, 0);
+  color: rgba(19, 2, 2, 0.5);
 }
 .time {
   font-size: 30px;
@@ -70,32 +66,7 @@ footer {
   margin-top: 30px;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: #f0f0f0;
-  }
-
-  .container {
-    background-image: url(/World-Clock/img/clock_animation.gif);
-    background-size: cover;
-    width: 90%;
-    margin: 0 auto;
-    object-fit: scale-down;
-  }
-  h1 {
-    color: rgb(248, 160, 59);
-  }
-
-  select {
-    width: 60%;
-  }
-
-  .cities {
-    display: block;
-  }
-  .time {
-    margin-top: 2px;
-    border-bottom: gray dashed 1px;
-    width: 50%;
-  }
+a {
+  text-decoration: none;
+  color: rgb(206, 133, 50);
 }
