@@ -72,15 +72,25 @@ function updateNewYorkTime() {
 
 setInterval(updateNewYorkTime, 1000);
 
-//----Tokyo------//
-
-function updateTokyoTime() {
-  let tokyoElement = document.querySelector("#tokyo");
-  let tokyoDate = tokyoElement.querySelector(".date");
-  let tokyoTime = tokyoElement.querySelector(".time");
-
-  let tokyoTimeElement = moment().tz("Asia/Tokyo");
-  tokyoDate.innerHTML = tokyoTimeElement.format("MMMM Do YYYY");
-  tokyoTime.innerHTML = tokyoTimeElement.format("h:mm:ss [<small>]A[</small]");
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  let cityName = cityTimeZone.split("/")[1];
+  let citiesElement = document.querySelector("#london");
+  citiesElement.innerHTML = `
+  <div class="cities">
+        <div class="flex">
+          <h2>${cityName}</h2>
+          <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+        </div>
+        <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+    "A"
+  )}</small>
+        </div>
+        </div>
+        </div>
+     `;
 }
-setInterval(updateTokyoTime, 1000);
+
+let selectCitiesElement = document.querySelector("#city");
+selectCitiesElement.addEventListener("change", updateCity);
