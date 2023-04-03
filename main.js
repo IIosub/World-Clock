@@ -74,11 +74,15 @@ setInterval(updateNewYorkTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+if(cityTimeZone === "current"){
+  cityTimeZone = moment.tz.guess()
+}
+
   let cityTime = moment().tz(cityTimeZone);
   let cityName = cityTimeZone.split("/")[1];
   let citiesElement = document.querySelector("#london");
   citiesElement.innerHTML = `
-  <div class="cities">
+  <div class="cities>
         <div class="flex">
           <h2>${cityName}</h2>
           <div class="date">${cityTime.format("MMMM Do YYYY")}</div>

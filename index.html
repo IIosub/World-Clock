@@ -25,13 +25,21 @@
     </div>
     <select id="city">
       <option value="">Select a city...</option>
+      <option value="current"> Current Time Zone</option>
       <option value="Europe/Rome">Rome 🇮🇹</option>
       <option value="Europe/Berlin">Berlin 🇩🇪</option>
       <option value="Europe/Oslo">Oslo 🇳🇴</option>
+
+      <option value="Asia/Saigon">Saigon 🇻🇳</option>
+      <option value="Africa/Accra">Accra 🇬🇭</option>
+      <option value="Asia/Manila">Manila 🇵🇭</option>
     </select>
+
+
+
     <div id="displayed-cities">
       <div class="cities" id="london">
-        <div class="flex">
+        <div class="city-date">
           <h2>London</h2>
           <div class="date"></div>
         </div>
@@ -39,7 +47,7 @@
       </div>
 
       <div class="cities" id="warsaw">
-        <div class="flex">
+        <div class="city-date">
           <h2>Warsaw </h2>
           <div class="date"></div>
         </div>
@@ -47,7 +55,7 @@
       </div>
 
       <div class="cities" id="madrid">
-        <div class="flex">
+        <div class="city-date">
           <h2>Madrid</h2>
           <div class="date"></div>
         </div>
@@ -55,7 +63,7 @@
       </div>
 
       <div class="cities" id="milan">
-        <div class="flex">
+        <div class="city-date">
           <h2>Milan</h2>
           <div class="date"></div>
         </div>
@@ -63,7 +71,7 @@
       </div>
 
       <div class="cities" id="new-york">
-        <div class="flex">
+        <div class="city-date">
           <h2>New Tork </h2>
           <div class="date"></div>
         </div>
